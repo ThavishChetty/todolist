@@ -8,6 +8,9 @@
         <p>
             {{ form.list_name.label }}<br>
             {{ form.list_name(size=32) }}
+            {% for error in form.list_name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
         </p>
         <p>{{ form.add_list() }}</p>
     </form>

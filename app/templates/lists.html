@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <hr>
+    <h1>Lists of all Lists</h1>
+    <table>
+    <tr>
+        <th>Lists</th>
+    </tr>
+    {% for list in lists %}
+    <tr>
+        <td>{{ list.listname }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
